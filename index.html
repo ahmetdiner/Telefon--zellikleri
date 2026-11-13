@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeknoCep - Telefon Dünyası</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+}
+header {
+  background: #172438;
+  padding: 25px;
+  text-align: center;
+}
+header h1 {
+  color: #38bdf8;
+}
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+}
+input {
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+.phone {
+  background: #1e293b;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+.phone h2 {
+  color: #38bdf8;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>TEKNOCEP</h1>
+  <p>Telefonların özelliklerini keşfet!</p>
+</header>
+
+<main>
+  <h2>Telefon Modelleri</h2>
+
+  <input id="search" placeholder="Telefon ara...">
+
+  <div class="phone">
+    <h2>iPhone 17 Pro Max</h2>
+    <p>Marka: Apple</p>
+    <p>Ekran: 6.9 inç</p>
+    <p>Hafıza: 256 GB</p>
+    <p>İşlemci: A19 Pro</p>
+  </div>
+
+  <div class="phone">
+    <h2>Galaxy S25 Ultra</h2>
+    <p>Marka: Samsung</p>
+    <p>Hafıza: 256 GB</p>
+    <p>İşlemci: Snapdragon 8 Elite</p>
+  </div>
+
+  <div class="phone">
+    <h2>Xiaomi 15 Ultra</h2>
+    <p>Marka: Xiaomi</p>
+    <p>Hafıza: 512 GB</p>
+  </div>
+</main>
+
+<footer>
+  © 2026 TeknoCep
+</footer>
+
+<script>
+const search = document.getElementById("search");
+
+search.addEventListener("input", function() {
+  const value = search.value.toLowerCase();
+
+  document.querySelectorAll(".phone").forEach(phone => {
+    phone.style.display =
+      phone.innerText.toLowerCase().includes(value)
+      ? "block" : "none";
+  });
+});
+</script>
+
+</body>
+</html>
