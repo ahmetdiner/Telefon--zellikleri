@@ -1,1 +1,1 @@
-# Telefon--zellikleri
+# Telefon--özellikleri
